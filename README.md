@@ -5,7 +5,7 @@
 # Prerequisites
 - Zoom v5.2.1 (make sure you double-check your Zoom version)
 - Python >= 3.6 
-- [Captura v8.0.0](https://github.com/MathewSachin/Captura/releases/tag/v8.0.0)
+- [Captura v8.0.0](https://github.com/MathewSachin/Captura/releases/tag/v8.0.0) (Make sure you install the FFMpeg video package (in Captura Setting) after downloading Captura. Otherwise the video may lose frame. )
 - Python libraries:
   - keyboard
   - PyAutoGUI
