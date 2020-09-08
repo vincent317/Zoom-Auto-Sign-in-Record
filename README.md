@@ -5,7 +5,7 @@
 # Software Prerequisites
 - Zoom v5.2.1 (make sure you double-check your Zoom version)
 - Python >= 3.6 
-- [Captura v8.0.0](https://github.com/MathewSachin/Captura/releases/tag/v8.0.0) (Make sure you install the FFMpeg video package (in Captura Setting) after downloading Captura. Otherwise the video may lose frame. )
+- [Captura v8.0.0](https://github.com/MathewSachin/Captura/releases/tag/v8.0.0)
 - Python libraries:
   - keyboard
   - PyAutoGUI
@@ -13,7 +13,7 @@
   - subprocess
   - tkinter
 
-# A Couple Of Settings
+# Some Settings
   - After downloading Captura, make sure you install the FFMpeg video package (under the video setting), otherwise the video will lose frame.
   - Change the Captura recording frame to **10**, otherwise the video will lose frame.
  
@@ -26,7 +26,7 @@
      <br /> **Note.** For class time & class length, leave two/three minutes space. (ex. If your meeting is 8:00-12:00, use 7:58-12:01). <br /> <br /> 
   4. Click All Set button. <br /> <br /> 
   5. Enjoy your sleep! Your class will be automatically recorded in Captura's default save path. 
-     <br /> **Note.** Do not move your mouse after clicking all set button. 
+     <br /> **Note.** Do **NOT** move your mouse after clicking all set button. 
      
 # Issues
   Send me a PR or email me (dpeng12@terpmail.umd.edu). 
