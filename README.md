@@ -15,9 +15,9 @@
   
 # How should I use it?
   1. Make sure you have started Zoom and signed in. 
-     <br /> **Note.** Do not start Captura. 
-  1. Open terminal and do ```python gui.py```. <br /> <br /> 
-  2. Entering your class time, meeting ID, class length, and meeting password (if there's one). 
+     <br /> **Note.** Do not start Captura.  <br /> <br />
+  2. Open terminal and do ```python gui.py```. <br /> <br /> 
+  3. Entering your class time, meeting ID, class length, and meeting password (if there's one). 
      <br /> **Note.** If your meeting has a password, type Fpassword (ex. F123); if not, type Tpassword (ex. T123).
      <br /> **Note.** For class time & class length, leave two/three minutes space. (ex. If your meeting is 8:00-12:00, use 7:58-12:01). <br /> <br /> 
   4. Click All Set button. <br /> <br /> 
