@@ -14,6 +14,8 @@
   - tkinter
   
 # How should I use it?
+  1. Make sure you have started Zoom and signed in. 
+     <br /> **Note.** Do not start Captura. 
   1. Open terminal and do ```python gui.py```. <br /> <br /> 
   2. Entering your class time, meeting ID, class length, and meeting password (if there's one). 
      <br /> **Note.** If your meeting has a password, type Fpassword (ex. F123); if not, type Tpassword (ex. T123).
@@ -24,4 +26,3 @@
      
 # Issues
   Send me a PR or email me (dpeng12@terpmail.umd.edu). 
-
