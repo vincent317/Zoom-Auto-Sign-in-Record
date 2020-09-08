@@ -2,14 +2,28 @@ import keyboard, time, subprocess
 from datetime import datetime
 import pyautogui
 import argparse
+import os
+import win32api
 
-# Instantiate the parser
 parser = argparse.ArgumentParser(description='Optional app description')
 parser.add_argument('classTime')
 parser.add_argument('meetingId')
 parser.add_argument('meetingLength')
 parser.add_argument('password')
 args = parser.parse_args()
+
+def find(name, path):
+    for root, dirs, files in os.walk(path):
+        if name in files:
+            return os.path.join(root, name)
+    return None
+
+def findInAllDrives(exe):
+    for drive in win32api.GetLogicalDriveStrings().split('\000')[:-1]:
+        res = find(exe, drive)
+        if res != None:
+          return res
+    return None
 
 #Personal Settings
 classTime = args.classTime
@@ -18,8 +32,8 @@ meetingId = args.meetingId
 meetingLength = args.meetingLength
 
 #Buttons
-zoomExePath = "C:\\Users\\29469\\AppData\\Roaming\\Zoom\\bin\\Zoom.exe"
-capturaExePath = "C:\\Program Files (x86)\\Captura\\captura.exe"
+zoomExePath = findInAllDrives("Zoom.exe")
+capturaExePath = findInAllDrives("captura.exe")
 firstJoin = "buttons\\join_button.png"
 secondJoin = "buttons\\join_button_2.png"
 joinAfterPassword = "buttons\\join_after_password.png"
@@ -33,7 +47,7 @@ def locateAndClick(path):
         position = pyautogui.locateOnScreen(path, grayscale = False)
     pyautogui.moveTo(position)
     pyautogui.click()
-    time.sleep(5)
+    time.sleep(6)
 
 def main():
     while(1):
@@ -41,7 +55,7 @@ def main():
 
         if classTime == timestr:
             subprocess.Popen(zoomExePath)
-            time.sleep(5)
+            time.sleep(2)
 
             #Setting up zoom
             locateAndClick(firstJoin)
@@ -49,18 +63,19 @@ def main():
             locateAndClick(secondJoin)
             if password[0] == 'T':
                 keyboard.write(password[2:])
-            time.sleep(3)
-            locateAndClick(joinAfterPassword)
-            time.sleep(2)
-            
+                locateAndClick(joinAfterPassword)
+            time.sleep(10)
+
             #Setting up Captura
             subprocess.Popen(capturaExePath)
+            time.sleep(2)
             locateAndClick(startRecord)
             locateAndClick(minimizeWindow)
             time.sleep(int(meetingLength) * 60)
 
             #Exits
             subprocess.Popen(capturaExePath)
+            time.sleep(2)
             locateAndClick(stopRecord)
             print("disconnect time: "+ datetime.now().strftime("%H:%M"))
             break
