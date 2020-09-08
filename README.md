@@ -2,7 +2,7 @@
 
 ### A Python project that automatically signs in to a Zoom meeting room and start recording. 
 
-# Prerequisites
+# Software Prerequisites
 - Zoom v5.2.1 (make sure you double-check your Zoom version)
 - Python >= 3.6 
 - [Captura v8.0.0](https://github.com/MathewSachin/Captura/releases/tag/v8.0.0) (Make sure you install the FFMpeg video package (in Captura Setting) after downloading Captura. Otherwise the video may lose frame. )
@@ -12,9 +12,13 @@
   - pandas
   - subprocess
   - tkinter
-  
+
+# A Couple Of Settings
+  - After downloading Captura, make sure you install the FFMpeg video package (under the video setting), otherwise the video will lose frame.
+  - Change the Captura recording frame to **10**, otherwise the video will lose frame.
+ 
 # How should I use it?
-  1. Make sure you have started Zoom and signed in. 
+  1. Make sure you have started Zoom and signed in.
      <br /> **Note.** Do not start Captura.  <br /> <br />
   2. Open terminal and do ```python gui.py```. <br /> <br /> 
   3. Entering your class time, meeting ID, class length, and meeting password (if there's one). 
