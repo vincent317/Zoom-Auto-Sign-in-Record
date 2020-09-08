@@ -2,7 +2,7 @@
 
 ### A Python project that automatically signs in to a Zoom meeting room and start recording. 
 
-# Prerequistes
+# Prerequisites
 - Zoom v5.2.1 (make sure you double-check your Zoom version)
 - Python >= 3.6 
 - [Captura v8.0.0](https://github.com/MathewSachin/Captura/releases/tag/v8.0.0)
