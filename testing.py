@@ -62,7 +62,7 @@ def main():
             keyboard.write(meetingId)
             locateAndClick(secondJoin)
             if password[0] == 'T':
-                keyboard.write(password[2:])
+                keyboard.write(password[1:])
                 locateAndClick(joinAfterPassword)
             time.sleep(10)
 

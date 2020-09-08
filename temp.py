@@ -14,3 +14,5 @@ def findInAllDrives(exe):
         if res != None:
           return res
     return None
+
+print("dce"[1:])
