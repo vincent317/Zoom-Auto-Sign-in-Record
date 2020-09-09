@@ -1,6 +1,6 @@
 # Zoom-Auto-Sign-in-Record
 
-### A Python project that automatically signs in to a Zoom meeting room and start recording. 
+### A Python project that automatically signs in to a Zoom meeting room and starts recording. 
 
 # Software Prerequisites
 - Zoom >= 5.2.1 (make sure you double-check your Zoom version)
